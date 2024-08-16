@@ -3,8 +3,9 @@ import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 
 const Onboard = () => {
   // Set your target date and time (e.g., October 25, 2024, 14:30:00)
-  const targetDate = new Date("2024-10-25T14:30:00");
+  const targetDate = new Date("2024-08-24T14:30:00");
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const calculateTimeLeft = () => {
     const now = new Date();
     const difference = targetDate - now;
