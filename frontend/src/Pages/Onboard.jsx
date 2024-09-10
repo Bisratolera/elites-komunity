@@ -112,7 +112,7 @@ const Onboard = () => {
 
       {/* Subtle Meskel flower animation */}
       <div className="absolute top-0 left-0 w-full h-full animate-floating-flower">
-        <img src="/path-to-meskel-flower-image.png" alt="Meskel Flower" className="w-24 h-24 opacity-10" />
+        <img src="https://freesvg.org/img/meskel-daisy.png" alt="Meskel Flower" className="w-24 h-24 opacity-10" />
       </div>
     </div>
   );

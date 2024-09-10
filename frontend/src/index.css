@@ -66,9 +66,9 @@
 }
 
 @keyframes floatingFlower {
-  0% { transform: translateY(0px); }
+  0% { transform: translateY(7px); }
   50% { transform: translateY(15px); }
-  100% { transform: translateY(0px); }
+  100% { transform: translateY(7px); }
 }
 
 .animate-fadeIn {
@@ -76,5 +76,5 @@
 }
 
 .animate-floating-flower {
-  animation: floatingFlower 6s infinite;
+  animation: floatingFlower 2s infinite;
 }
