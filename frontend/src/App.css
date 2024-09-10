@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles */
+.reaction-buttons {
+  @apply relative;
+}
+
+.reaction-options {
+  @apply absolute flex gap-2 p-2 rounded-lg bg-white border border-gray-300 shadow-lg;
+  top: 100%; /* Position below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  display: none; /* Hidden by default */
+}
+
+.reaction-buttons.show-options .reaction-options {
+  display: flex; /* Show when active */
+}
+
+.reaction-button {
+  @apply bg-transparent border-none cursor-pointer;
+}
+
+/* Hide emoji options when commenting or sharing */
+.comment-box,
+.share-list {
+  @apply mt-4;
+}
+
+.comment-box {
+  @apply p-4 bg-gray-800 rounded-lg border border-gray-700 relative flex flex-col items-center;
+}
+
+.comment-box textarea {
+  @apply w-full h-24 p-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 resize-none;
+}
+
+.comment-box button {
+  @apply bg-blue-500 text-white px-4 py-2 rounded-lg cursor-pointer mt-2;
+}
+
+/* Share list styling similar to LinkedIn */
+.share-list {
+  @apply p-4 bg-gray-800 rounded-lg border border-gray-700 relative;
+}
+
+.share-list ul {
+  @apply list-none p-0;
+}
+
+.share-list ul li {
+  @apply flex items-center space-x-3 py-2 px-3 cursor-pointer hover:bg-gray-700 rounded-lg;
+}
+
+.share-list ul li img {
+  @apply w-8 h-8 rounded-full;
+}
+
+.share-list ul li a {
+  @apply text-white;
+}
+
+/* Hide reaction buttons when commenting or sharing */
+.comment-visible .reaction-buttons,
+.share-visible .reaction-buttons {
+  display: none; /* Hide emoji options when commenting or sharing */
+}

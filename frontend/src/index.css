@@ -1,3 +1,80 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styles */
+.reaction-buttons {
+  @apply relative;
+}
+
+.reaction-options {
+  @apply absolute flex gap-2 p-2 rounded-lg bg-white border border-gray-300 shadow-lg;
+  top: 100%; /* Position below the button */
+  left: 50%;
+  transform: translateX(-50%);
+  display: none; /* Hidden by default */
+}
+
+.reaction-buttons:hover .reaction-options,
+.reaction-buttons.show-options .reaction-options {
+  display: flex; /* Show when active or hovered */
+}
+
+.reaction-button {
+  @apply bg-transparent border-none cursor-pointer;
+}
+
+/* Comment box styling */
+.comment-box {
+  @apply p-4 mt-4 bg-gray-800 rounded-lg border border-gray-700 relative flex flex-col items-center;
+}
+
+.comment-box textarea {
+  @apply w-full h-24 p-2 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 resize-none;
+}
+
+.comment-box button {
+  @apply bg-blue-500 text-white px-4 py-2 rounded-lg cursor-pointer mt-2;
+}
+
+/* Share list styling */
+.share-list {
+  @apply p-4 mt-4 bg-gray-800 rounded-lg border border-gray-700 relative;
+}
+
+.share-list ul {
+  @apply list-disc pl-6;
+}
+
+.share-list ul li {
+  @apply text-white py-1 cursor-pointer hover:bg-gray-700 px-2 rounded-lg;
+}
+
+/* Reaction emojis */
+.reaction-options {
+  display: none; /* Hide by default */
+}
+
+.reaction-buttons:hover .reaction-options,
+.reaction-buttons.show-options .reaction-options {
+  display: flex; /* Show options on hover */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes floatingFlower {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(15px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 2s ease-in;
+}
+
+.animate-floating-flower {
+  animation: floatingFlower 6s infinite;
+}
